@@ -1,6 +1,6 @@
-const reverse = require("../js/reverse");
+const reverse = require("../functions/reverse");
 
-test.skip("is string", () => {
+test("is string", () => {
   expect(() => {
     reverse(111);
   }).toThrow(Error);
@@ -9,7 +9,7 @@ test.skip("is string", () => {
   }).not.toThrow(Error);
 });
 
-test.skip("reverses", () => {
+test("reverses", () => {
   expect(reverse("yoo")).toBe("ooy");
   expect(reverse("123")).toBe("321");
 });

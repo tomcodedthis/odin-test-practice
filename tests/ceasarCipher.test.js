@@ -1,27 +1,27 @@
-const caesarCipher = require("../js/ceasarCipher");
+const caesarCipher = require("../functions/ceasarCipher");
 const sharedInput = "abc";
 
-test.skip("is string", () => {
+test("is string", () => {
   expect(() => caesarCipher(sharedInput)).not.toThrow(Error);
 });
 
-test.skip("all lowercase", () => {
+test("all lowercase", () => {
   expect(caesarCipher(sharedInput)).toBe("bcd");
 });
 
-test.skip("all uppercase", () => {
+test("all uppercase", () => {
   expect(caesarCipher("ABC")).toBe("bcd");
 });
 
-test.skip("mixed case", () => {
+test("mixed case", () => {
   expect(caesarCipher("AbCd")).toBe("bcde");
 });
 
-test.skip("punctuation", () => {
+test("punctuation", () => {
   expect(() => caesarCipher("!//..")).toThrow(Error);
 });
 
-test.skip("end of alphabet", () => {
+test("end of alphabet", () => {
   const string = "yza";
 
   expect(caesarCipher(string)).toBe("zab");

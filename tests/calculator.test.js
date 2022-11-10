@@ -1,26 +1,26 @@
-const calculator = require("../js/calculator");
+const calculator = require("../functions/calculator");
 
-test.skip("is number", () => {
+test("is number", () => {
   const input = { a: 2, b: 3 };
-  expect(() => calculator.isNumbers(sharedInput)).not.toThrow(Error);
+  expect(() => calculator.isNumbers(input)).not.toThrow(Error);
 });
 
-test.skip("sum", () => {
+test("sum", () => {
   const input = { a: 2, b: 3 };
-  expect(calculator.sum(sharedInput)).toBe(5);
+  expect(calculator.sum(input)).toBe(5);
 });
 
-test.skip("subract", () => {
+test("subract", () => {
   const input = { a: 10, b: 3 };
   expect(calculator.subtract(input)).toBe(7);
 });
 
-test.skip("divide", () => {
+test("divide", () => {
   const input = { a: 40, b: 2 };
   expect(calculator.divide(input)).toBe(20);
 });
 
-test.skip("multiply", () => {
+test("multiply", () => {
   const input = { a: 5, b: 10 };
   expect(calculator.multiply(input)).toBe(50);
 });
